@@ -1,0 +1,128 @@
+
+:root {
+  --color-bg: #0d0d0d;
+  --color-surface: #1c1c1c;
+  --color-surface-hover: #262626;
+  --color-border: #2b2b2b;
+
+  --color-text: #f5f5f5;
+  --color-text-muted: #a3a3a3;
+  
+  --color-text-dim: #b3b3b3;
+
+  --color-accent: #e50914;
+  --color-accent-hover: #ff1f2b;
+  --color-star: #f5c518;
+  --color-danger: #ff5a5f;
+  
+  --color-success: #1e7d37;
+  --color-success-hover: #24913f;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-raised: 0 16px 40px rgba(0, 0, 0, 0.6);
+
+  --page-max-width: 1230px;
+  --page-gutter: 24px;
+  --header-height: 68px;
+
+  color-scheme: dark;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.page-container {
+  width: min(var(--page-max-width), 64%);
+  margin-inline: auto;
+}
+
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 1024px) {
+  .page-container {
+    width: 88%;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-gutter: 16px;
+  }
+
+  .page-container {
+    width: 90%;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
