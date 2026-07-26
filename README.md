@@ -26,13 +26,6 @@ npm install
 npm run dev      # http://localhost:3000
 ```
 
-Other scripts:
-
-```bash
-npm run build    # production bundle -> build/
-npm run preview  # serve the production bundle locally
-npm run lint     # oxlint
-```
 
 ### Test credentials
 
